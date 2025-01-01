@@ -26,12 +26,12 @@ Company leadership has noticed a big churn problem this year which has had a lar
 ## Results & Business Recommendations
 
 ### Results:
-* 81.81% of users are selecting at least 1 additional cancelation reason (beyond the first required one), but most users are not selecting all 3 which suggests lack of interest and frustration for the user.
-* X% of users reported Y as the primary (first) cancelation reason. The top choices for the primary reason were _______.
+* 81.8% of users are selecting at least 1 additional cancelation reason (beyond the first required one), but most users are not selecting all 3 which suggests lack of interest and frustration for the user.
+* 36.4% of users reported "Not Useful" as the primary (first) cancelation reason. The top choices for the primary reason were "Not Useful" and "Expensive".
 * Over time, here's how the cancelation reasons have changed: _____. (Pretend we have enough data to draw these conclusions!)
 
 ### Business Recommendations:
-* Since most users, have selected Expensive and Not Useful as the reasons to cancel, we should rollout better onboarding and provide more help early on in their subscription to ensure users and understanding the product and finding it useful. If they find the product more useful and valuable, they also many become less cost-sensitive to the value.
+* Since most users have selected "Not Useful" and "Expensive" as the reasons to cancel, we should rollout better onboarding and provide more help early on in their subscription to ensure users and understanding the product and finding it useful. If they find the product more useful and valuable, they also may become less cost-sensitive to the value.
 * For cost conscious users, we could also launch a rescue tactic at the beginning of the cancelation workflow that offers them a large discount to stay and not cancel their subscription.
 * Since the most common cancelation reason for the secondary reason is Went to Competitor, we should research the market and ensure we're keeping up to date with industry trends.
 
