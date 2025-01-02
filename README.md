@@ -26,7 +26,7 @@ Company leadership has noticed a big churn problem this year which has had a lar
 ## Results & Business Recommendations
 
 ### Results:
-* 81.8% of users are selecting at least 1 additional cancelation reason (beyond the first required one), but most users are not selecting all 3 which suggests lack of interest and frustration for the user.
+* 81.8% of users are selecting at least 1 additional cancelation reason (beyond the first required one), but 63.6% of users are not selecting all 3 which suggests lack of interest and frustration for the user.
 * 36.4% of users reported "Not Useful" as the primary (first) cancelation reason. The top choices for the primary reason were "Not Useful" and "Expensive".
 * Over time, here's how the cancelation reasons have changed: _____. (Pretend we have enough data to draw these conclusions!)
 
