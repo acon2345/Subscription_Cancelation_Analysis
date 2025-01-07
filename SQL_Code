@@ -1,1 +1,27 @@
+--The query below gives some descpritive statistics on how many subscriptions and cancelations are present and that percent are canceling
+
+select
+    count(distinct subs.subscription_id) as num_subs,
+    count(distinct cans.subscription_id) as num_cancelations,
+    num_cancelations / num_subs * 100 as perc_subs_canceling
+from
+    public.subscriptions subs
+left join
+    public.cancelations cans
+    on subs.subscription_id = cans.subscription_id
+
+
+--The query below gives us a count of how many selected each reason for their required reason using a window function
+--Also shows the percent of the total amount
+
+select
+    cancelation_reason1,
+    count(*) as num_instances,
+    count(distinct subscription_id) as num_subs,
+    sum(num_subs) over() as total_subs,
+    num_subs / total_subs * 100 as perc_of_total_subs
+from
+    cancelations
+group by
+    1
 
