@@ -1,4 +1,4 @@
-# Subscription_Cancelation_Analysis
+# Subscription Cancelation Analysis
 
 ## Executive Summary:
 Facing a significant churn issue and major revenue loss, the company leadership wants deeper insights into the reasons behind subscription cancellations to inform future retention efforts. This analysis uses user-reported cancellation reasons to identify trends and provide business recommendations to support future retention.
