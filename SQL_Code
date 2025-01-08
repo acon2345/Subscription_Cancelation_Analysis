@@ -25,3 +25,62 @@ from
 group by
     1
 
+
+--The query below showcases the use of a view and unions to create data used for further research of the reason, reason number, date and subscriber
+
+create or replace view junk.all_cancelation_reasons_ac as
+select
+    subscription_id,
+    cancel_date,
+    cancelation_reason1 as cancelation_reason,
+    1 as reason_number
+from
+    public.cancelations
+
+union
+
+select
+    subscription_id,
+    cancel_date,
+    cancelation_reason2 as cancelation_reason,
+    2 as reason_number
+from
+    public.cancelations
+
+union
+
+select
+    subscription_id,
+    cancel_date,
+    cancelation_reason3 as cancelation_reason,
+    3 as reason_number
+from
+    public.cancelations
+;
+
+select
+    *
+from
+    junk.all_cancelation_reasons_ac
+
+--The below shows the use of views, CTEs and window functions to research the number of subscriptions per reason year over year
+--Helps to present a change over time
+
+with yearly as(
+select
+    date_trunc('year', cancel_date::date) as cancel_year,
+    cancelation_reason,
+    count(*) as num_reason
+from
+    junk.all_cancelation_reasons_ac
+group by
+    1,2
+)
+select
+    cancel_year,
+    cancelation_reason,
+    num_reason,
+    sum(num_reason) over(partition by cancel_year) as year_total,
+    num_reason * 100/ year_total as perc_reason_annual
+from
+    yearly
